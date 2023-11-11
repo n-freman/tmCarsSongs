@@ -20,6 +20,24 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - name: singer__full_name
+        required: false
+        in: query
+        description: singer__full_name
+        schema:
+          type: string
+      - name: title
+        required: false
+        in: query
+        description: title
+        schema:
+          type: string
+      - name: genre
+        required: false
+        in: query
+        description: genre
+        schema:
+          type: string
       responses:
         '200':
           content:
@@ -58,6 +76,24 @@ paths:
         description: A unique integer value identifying this song.
         schema:
           type: string
+      - name: singer__full_name
+        required: false
+        in: query
+        description: singer__full_name
+        schema:
+          type: string
+      - name: title
+        required: false
+        in: query
+        description: title
+        schema:
+          type: string
+      - name: genre
+        required: false
+        in: query
+        description: genre
+        schema:
+          type: string
       responses:
         '200':
           content:
@@ -84,6 +120,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - name: full_name
+        required: false
+        in: query
+        description: full_name
+        schema:
+          type: string
       responses:
         '200':
           content:
@@ -146,6 +188,12 @@ paths:
         description: A unique integer value identifying this singer.
         schema:
           type: string
+      - name: full_name
+        required: false
+        in: query
+        description: full_name
+        schema:
+          type: string
       responses:
         '200':
           content:
@@ -163,6 +211,12 @@ paths:
         in: path
         required: true
         description: A unique integer value identifying this singer.
+        schema:
+          type: string
+      - name: full_name
+        required: false
+        in: query
+        description: full_name
         schema:
           type: string
       requestBody:
@@ -195,6 +249,12 @@ paths:
         description: A unique integer value identifying this singer.
         schema:
           type: string
+      - name: full_name
+        required: false
+        in: query
+        description: full_name
+        schema:
+          type: string
       requestBody:
         content:
           application/json:
@@ -223,6 +283,12 @@ paths:
         in: path
         required: true
         description: A unique integer value identifying this singer.
+        schema:
+          type: string
+      - name: full_name
+        required: false
+        in: query
+        description: full_name
         schema:
           type: string
       responses:
@@ -361,6 +427,7 @@ components:
       properties:
         username:
           type: string
+          writeOnly: true
         password:
           type: string
           writeOnly: true
@@ -382,5 +449,6 @@ components:
       properties:
         token:
           type: string
+          writeOnly: true
       required:
       - token
