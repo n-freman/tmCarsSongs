@@ -7,6 +7,10 @@ from songs.models import Song
 
 class SongModelTest(TestCase):
 
+    def test_default_genre(self):
+        song = Song()
+        self.assertEqual(song.genre, '')
+
     def test_song_is_related_to_singer(self):
         singer = Singer.objects.create()
         song = Song()

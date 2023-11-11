@@ -24,3 +24,9 @@ class SingerModelTest(TestCase):
             singer2.save()
             singer2.full_clean()
 
+    def test_string_representation(self):
+        singer = Singer(
+            full_name="Singer"
+        )
+        self.assertEqual(str(singer), 'Singer')
+
