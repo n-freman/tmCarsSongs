@@ -1,7 +1,7 @@
-from django.test import TestCase
 from django.core.exceptions import ValidationError
-
+from django.test import TestCase
 from singers.models import Singer
+
 from songs.models import Song
 
 
@@ -37,7 +37,6 @@ class SongModelTest(TestCase):
         )
         song1.save()
         with self.assertRaises(ValidationError):
-            song2.save()
             song2.full_clean()
 
     def test_string_representation(self):

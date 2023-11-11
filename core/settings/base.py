@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     
     # First party apps
+    "singers",
     "songs",
 ]
 
